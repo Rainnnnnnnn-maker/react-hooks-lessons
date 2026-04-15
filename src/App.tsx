@@ -1,6 +1,5 @@
 import "./App.css";
-import { AuthProvider } from "./lessons/Lesson4/Lesson4_1/context/AuthContext";
-import Lesson4_1 from "./lessons/Lesson4/Lesson4_1/Lesson4_1";
+import Lesson5_1 from "./lessons/Lesson5/Lesson5_1/Lesson5_1";
 
 function App() {
   return (
@@ -10,9 +9,10 @@ function App() {
       {/* <Lesson2_1 /> */}
       {/* <Lesson3_1 /> */}
       {/* ... */}
-      <AuthProvider>
+      {/* <AuthProvider>
         <Lesson4_1 />
-      </AuthProvider>
+      </AuthProvider> */}
+      <Lesson5_1 />
     </div>
   );
 }
