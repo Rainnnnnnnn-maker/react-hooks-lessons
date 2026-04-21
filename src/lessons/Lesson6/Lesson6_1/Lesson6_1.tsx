@@ -18,11 +18,16 @@ const Lesson6_1 = () => {
   ]);
 
   const sendMessage = async (formData: FormData) => {
-    const sendMessage = await deliverMessage(formData.get("message") as string);
-    setMessages((messages: string | any[]) => [
+    const message = formData.get("message") as string;
+    
+    // 楽観的UIのため、先にstateを更新してはいけない。
+    // useOptimisticを使っている場合は、親コンポーネントでの実際の状態更新は
+    // サーバーの応答を待ってから行うべき。
+    const sentMessage = await deliverMessage(message);
+    setMessages((messages: Message[]) => [
       ...messages,
       {
-        text: sendMessage,
+        text: sentMessage,
         sending: false,
         key: messages.length + 1,
       },
