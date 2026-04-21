@@ -1,5 +1,6 @@
 import "./App.css";
-import Lesson5_1 from "./lessons/Lesson5/Lesson5_1/Lesson5_1";
+//import Lesson5_1 from "./lessons/Lesson5/Lesson5_1/Lesson5_1";
+import Lesson6_1 from "./lessons/Lesson6/Lesson6_1/Lesson6_1";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <AuthProvider>
         <Lesson4_1 />
       </AuthProvider> */}
-      <Lesson5_1 />
+      {/* <Lesson5_1 /> */}
+      <Lesson6_1 />
     </div>
   );
 }
